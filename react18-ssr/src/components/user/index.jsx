@@ -13,6 +13,7 @@ function wrapPromise(promise) {
             result = e;
         }
     );
+    console.log(suspender, 'suspender');
     return {
         read() {
             if (status === "pending") {
@@ -40,6 +41,10 @@ const resourceMap = {
     3: wrapPromise(requestUser(3)),
     5: wrapPromise(requestUser(5)),
 };
+
+// 使用Suspense必须返回一个会resolve ES Module的Promise(throw抛出错误的Promise)
+// throw抛出错误的Promise，为了打断子树渲染，这里直接抛错出去，发现是Pending状态后就会去渲染fallback，并持续等待Promise的状态变更
+// 区别对待不同网络环境（数据返回快的话压根不会出现fallback-loading）
 
 const User = (props) => {
     const resource = resourceMap[props.id];

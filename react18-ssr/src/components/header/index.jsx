@@ -1,17 +1,22 @@
-import React, {Suspense} from "react";
-import User from '../user';
+import React, {lazy, Suspense} from "react";
+
+// 使用lazy动态进行异步加载组件 懒加载组件
+const User = lazy(() => {
+    return import('../user');
+});
+
 const head = () => {
     return (<div>
         我是head组件2
-        <React.Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<div>Loading...</div>}>
             <User id={1} />
-        </React.Suspense>
-        <React.Suspense fallback={<div>Loading...</div>}>
+        </Suspense>
+        <Suspense fallback={<div>Loading...</div>}>
             <User id={3} />
-        </React.Suspense>
-        <React.Suspense fallback={<div>Loading...</div>}>
+        </Suspense>
+        <Suspense fallback={<div>Loading...</div>}>
             <User id={5} />
-        </React.Suspense>
+        </Suspense>
     </div>)
 }
 
