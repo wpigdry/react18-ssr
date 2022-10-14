@@ -44,7 +44,7 @@ webpack(webpackConfig, (error, status) => {
     // 配置静态资源，管理静态文件，可通过服务器直接访问静态文件夹中的资源。路径dist为当前路径
     app.use(static('dist'));
 
-    app.listen(8000, () => {
+    app.listen(80, () => {
         console.log('react18-ssr启动成功')
     });
 });
