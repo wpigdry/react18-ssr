@@ -1,6 +1,7 @@
 /*
  * @file: 文字高亮组件
  */
+import React from "react";
 
 const HighLight = ({className = '', text, matching = ''}) => {
     let reg = new RegExp(matching, 'i');

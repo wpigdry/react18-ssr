@@ -24,7 +24,7 @@
       "build": "react-scripts build",
       "test": "react-scripts test",
       "eject": "react-scripts eject",
-    // 开发环境启动服务器ssr   cross-env环境变量适配
+    // 开发环境启动服务器ssr   cross-env环境变量适配   --ignore nodemon忽略哪些文件的变动
       "dev": "cross-env NODE_ENV=development nodemon server.js",
       "online": "NODE_ENV=production nodemon server.js",
       "build_client": "webpack"
