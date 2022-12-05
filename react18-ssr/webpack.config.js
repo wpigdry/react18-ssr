@@ -26,7 +26,7 @@ const defaultConfig = {
         // name和entry的app文件名称对应 也可以改名
         // 无变化不更新hash，读取之前的缓存文件  变化后更新hash，读取新的文件
         // 不加hash的话，更新文件后，两次访问的地址都是一样的，浏览器就会从缓存读取
-        filename: '[name].[hash:8].js'
+        // filename: '[name].[hash:8].js'
     },
     resolve: {
         // 配置省略后者名
@@ -58,6 +58,13 @@ const defaultConfig = {
                 // 排除解析node_modules的.js文件
                 exclude: /node_modules/
             },
+            {
+                test: /\.css$/,
+                use: [
+                    'style-loader',
+                    'css-loader',
+                ]
+            }
         ]
     },
     plugins: [

@@ -35,7 +35,7 @@ webpack(webpackConfig, (error, status) => {
     // 实例化express
     const app = express();
 
-    // /路由则返回ssrRender的html
+// /路由则返回ssrRender的html
     app.get('/', (req, res) => {
         // res.send('我是页面')
         ssrRender(req, res, assets)

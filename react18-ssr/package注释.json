@@ -35,6 +35,7 @@
         "react-app/jest"
       ]
     },
+    // babel会针对浏览器信息采取不同的编译
     "browserslist": {
       "production": [
         ">0.2%",

@@ -1,0 +1,11 @@
+.container {
+    background-color: orange;
+    height: 100vh;
+}
+
+.footer {
+    position: fixed;
+    bottom: 60px;
+    display: flex;
+    background-color: bisque;
+}
