@@ -18,8 +18,8 @@ function App() {
       <HookDiy/>
 
       <div className="footer">
-        <a href="https://beian.miit.gov.cn/" target="_blank">备案号</a>
-        <a href="https://beian.miit.gov.cn/" target="_blank">京ICP备2021033668号-1</a>
+        <a href="https://beian.miit.gov.cn/" target="_blank" rel="noreferrer">备案号</a>
+        <a href="https://beian.miit.gov.cn/" target="_blank" rel="noreferrer">京ICP备2021033668号-1</a>
     </div>
     </div>
   );

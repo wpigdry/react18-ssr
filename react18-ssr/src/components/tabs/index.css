@@ -1,0 +1,15 @@
+.tab-title {
+    padding: 10px 30px;
+    background-color: antiquewhite;
+    text-align: center;
+}
+
+.tab-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tab-text {
+    padding: 10px 20px;
+    background-color: cadetblue;
+}
