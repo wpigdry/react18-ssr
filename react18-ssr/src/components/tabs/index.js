@@ -7,21 +7,21 @@ function Tabs () {
     const flag = useRef(false); // 接口是否返回
     const promiseStatus = useRef(null); // 记录Promise状态
 
-    const [tab, setTab] = useState([{text: '查找'}, {text: '筛选'}]);
+    const [tab, setTab] = useState([]);
 
     useEffect(() => {
-        const url = 'http://localhost:3000/getTabs';
+        const url = 'http://localhost:8080/postapi/getTabs';
         const params = {};
         promiseStatus.current = request.post(url, params).then(res => {
             flag.current = true;
             setTab(res);
-
         });
     }, []);
 
 
     if (!flag.current) {
         if (promiseStatus.current) {
+            console.log('抛出一个错误的Promise');
             throw promiseStatus.current;
         }
         else {

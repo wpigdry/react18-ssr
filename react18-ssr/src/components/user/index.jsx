@@ -52,7 +52,6 @@ const User = (props) => {
     const resource = resourceMap[props.id];
     const user = resource.read();
 
-    console.log('ppppppp');
     return <div>当前用户是: {user.name}</div>;
 };
 
